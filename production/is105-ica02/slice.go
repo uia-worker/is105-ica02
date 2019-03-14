@@ -21,4 +21,3 @@ func Reslice(slc []byte, lidx int, uidx int) []byte {
 	s = s[lidx:uidx]
 	return s
 }
-
