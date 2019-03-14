@@ -33,8 +33,13 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -89,32 +94,7 @@
             <path>
               <item name="is105-ica02" type="b2602c69:ProjectViewProjectNode" />
               <item name="is105-ica02" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="is105-ica02" type="b2602c69:ProjectViewProjectNode" />
-              <item name="is105-ica02" type="462c0819:PsiDirectoryNode" />
-              <item name="ascii" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="is105-ica02" type="b2602c69:ProjectViewProjectNode" />
-              <item name="is105-ica02" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="is105-ica02" type="b2602c69:ProjectViewProjectNode" />
-              <item name="is105-ica02" type="462c0819:PsiDirectoryNode" />
               <item name="fileutils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="is105-ica02" type="b2602c69:ProjectViewProjectNode" />
-              <item name="is105-ica02" type="462c0819:PsiDirectoryNode" />
-              <item name="iso" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="is105-ica02" type="b2602c69:ProjectViewProjectNode" />
-              <item name="is105-ica02" type="462c0819:PsiDirectoryNode" />
-              <item name="unicode" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -125,7 +105,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552584196731" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552584623064" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -161,7 +141,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="829" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -170,6 +149,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36909872" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" visible="true" weight="0.043227665" />
@@ -225,10 +205,10 @@
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
