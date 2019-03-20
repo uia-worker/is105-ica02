@@ -7,7 +7,7 @@ import "fmt"
 // Blir det kun en slik "string literal" eller trenger man flere
 // for å representere utvidet ASCII?
 // Her er consten for exstended ASCII
-const ASCII = "\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f" +
+const extendedASCII = "\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f" +
 	"\x90\x91\x92\x93\x94\x95\x96\x97\x98\x99\x9a\x9b\x9c\x9d\x9e\x9f" +
 	"\xa0\xa1\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xab\xac\xad\xae\xaf" +
 	"\xb0\xb1\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xbb\xbc\xbd\xbe\xbf" +
@@ -18,7 +18,7 @@ const ASCII = "\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f"
 
 //metode for å kjøre ASCII const
 func RunASCIIConst() {
-	IterateOverASCIIStringLiteral(ASCII)
+	IterateOverASCIIStringLiteral(extendedASCII)
 }
 
 // IterateOverASCIIStringLiteral tar en "string literal" som INN-data
@@ -32,15 +32,14 @@ func IterateOverASCIIStringLiteral(sl string) {
 
 //funskjon for å hente constructen extended ascii
 func GetExtendedASCIIStringLiteral() string {
-	return ASCII
+	return extendedASCII
 }
 
 // GreetingExtendedASCII returnerer en tekst-streng i
 // utvidet ASCII
 // Kode for Oppgave 2c
 func GreetingExtendedASCII() string {
-	s := []byte("Salut, ça va °-) Ça coute €50")
-	s = []byte("\"Salut, ça va °-) Κοστίζει €50\"")
+	s := []byte("\"Salut, ça va °-) Κοστίζει €50\"")
 	return string(s[:])
 
 }
