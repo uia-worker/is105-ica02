@@ -11,9 +11,9 @@ func Translate(expression string, language string) string {
 	uni := ""
 	if expression == "nord og sør" {
 		if language == "jp" {
-			uni = "\x22" +  expression +  "\x22" + "på japansk er: " + "\x22\xE5\x8C\x97\xE3\x81\xA8\xE5\x8D\x97\x22"
+			uni = "\x22" +  expression +  "\x22" + " på japansk er: " + "\x22\xE5\x8C\x97\xE3\x81\xA8\xE5\x8D\x97\x22"
 		} else if language == "is" {
-			uni =  "\x22 " + expression  + "\x22 " +  "på islandsk er: " + "\x22\x6E\x6f\x72\xC3\xB0\x75\x72\x20\x6F\x67\x20\x73\x75\xC3\xB0\x75\x72\x22"
+			uni =  "\x22 " + expression  + "\x22 " +  " på islandsk er: " + "\x22\x6E\x6f\x72\xC3\xB0\x75\x72\x20\x6F\x67\x20\x73\x75\xC3\xB0\x75\x72\x22"
 		}
 	}
 	return uni
