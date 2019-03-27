@@ -1,9 +1,9 @@
 package main
 
-import "github.com/Nosp1/Is-105/is105-ica02/iso"
+import (
+	"./ascii"
+)
 
 func main() {
-	extendedASCIIStringLiteral := iso.GetExtendedASCIIStringLiteral()
-	iso.IterateOverASCIIStringLiteral(extendedASCIIStringLiteral)
-
+	ascii.IterateOverASCIIStringLiteral(ascii.GetASCII())
 }
