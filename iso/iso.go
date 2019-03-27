@@ -40,6 +40,11 @@ func GetExtendedASCIIStringLiteral() string {
 // Kode for Oppgave 2c
 func GreetingExtendedASCII() string {
 	s := []byte("\"Salut, ça va °-) Κοστίζει €50\"")
+	//fmt.Printf("%X\n %q %b\n", s,s,s )
+	for i := 0; i < len(s); i++{
+		fmt.Printf("%X %q %b\n", s[i], s[i], s[i])
+	}
 	return string(s[:])
+
 
 }
