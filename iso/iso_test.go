@@ -13,7 +13,7 @@ var greetingtestExtendedASCII = []struct {
 func TestGreetingtestextendedASCII(t *testing.T) {
 	for _, v := range greetingtestExtendedASCII{
 		if val := GreetingExtendedASCII(); val != v.expected{
-			t.Errorf("String inn( %q) returned %q expected %q",v.n1, val, v.expected)
+			t.Errorf(" greetingExtendedASCII( %q) returned %q expected %q",v.n1, val, v.expected)
 
 		}
 	}
