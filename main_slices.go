@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/Nosp1/Is-105/is105-ica02/slice"
+	"./slice"
 )
 
 func main() {
@@ -15,5 +15,4 @@ func main() {
 	fmt.Println(&aslice[0])
 	fmt.Println("&byteslice1[50]")
 	fmt.Println(&byteSlice1[50])
-
 }

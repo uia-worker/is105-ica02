@@ -22,6 +22,8 @@ func IterateOverASCIIStringLiteral(stringLiteral string) {
 
 }
 
+
+
 func GetASCII() string {
 	return ascii
 }
