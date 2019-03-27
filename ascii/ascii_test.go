@@ -18,6 +18,10 @@ func withinAscii(s string) bool {
 		if s[i] > 127 {
 			return false
 		}
+		if s[i] < 128 && s[i] > 255 {
+			return false
+		}
 	}
 	return true
 }
+

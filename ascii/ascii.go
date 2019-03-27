@@ -8,14 +8,6 @@ const ascii = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f"
 	`@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_` +
 	"`abcdefghijklmnopqrstuvwxyz{|}~\x7f"
 
-// Oppgave 1b
-// Implementer en funksjon som eksportere const ascii
-
-// Funksjon tar en "string literal" med kun ASCII tegn og lager en utskrift på
-// følgende format:
-// [ascii-kode heksadesimalt med store bokstaver A-F][mellomrom]
-// [symbol for ascii-kode][mellomrom][ascii-kode binært][linjeskift]
-//
 // Eksempel (utskriften kommer fra en main.go fil):
 //	…
 // 3E > 111110

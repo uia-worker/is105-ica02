@@ -7,3 +7,4 @@ import (
 func main() {
 	ascii.IterateOverASCIIStringLiteral(ascii.GetASCII())
 }
+
