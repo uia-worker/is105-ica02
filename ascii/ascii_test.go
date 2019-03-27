@@ -24,4 +24,3 @@ func withinAscii(s string) bool {
 	}
 	return true
 }
-

@@ -8,6 +8,7 @@ var greetingtestExtendedASCII = []struct {
 }{
 	{"Salut, ça va °-", ""},
 	{"Salut, ça va °-) Κοστίζει €50", ""},
+	{"Salut, ça va °-) Κοστίζει ​€50 Forstår du?​",""},
 }
 
 func TestGreetingtestextendedASCII(t *testing.T) {
@@ -19,10 +20,10 @@ func TestGreetingtestextendedASCII(t *testing.T) {
 	}
 
 }
-func TestGreetingExtendedASCIIONly(t *testing.T) {
+func TestGreetingExtendedASCIIONLY(t *testing.T) {
 	val := GreetingExtendedASCII()
 	for _, i := range val {
-		if !(i > 0x80 && i < 0xff) {
+		if i < 0x7f && i > 0xff {
 			t.Errorf("greetingExtendedASCII() returns non-extended ASCII value: %q - %v", i, i)
 		}
 	}
