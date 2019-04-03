@@ -23,8 +23,5 @@ func withinAscii(s string) bool {
 		}
 	}
 	return true
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 345109c6f09a0647c3908a479d2eec5f4df3c755
+
