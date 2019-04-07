@@ -1,24 +1,27 @@
 package slice
 
-//import "fmt"
-
-// AllocateVar har INN-argument b
-// b - antall bytes brukeren ønsker å allokere 
-// Returnerer en slice av type []byte
-// 
+// Tar lengde og kapasitet som b og lager en ny tom []byte slice
 func AllocateVar(b int) []byte {
-	// Kode for Oppgave 5a
+	var s []byte
+	s = make([]byte, b, b)
+	return s
 }
 
-// AllocateMake tar lengde og kapasitet som b og lager en ny slice
-//
+// Tar lengde og kapasitet som b og lager en ny tom []byte slice
 func AllocateMake(b int) []byte {
-	// Kode for Oppgave 5a
+	s := make([]byte, b, b)
+	return s
 }
 
-// Reslice takes a slice and reslices it
+// Reslice tar en bit av slicen og returner en ny slice
 func Reslice(slc []byte, lidx int, uidx int) []byte {
-	// kode her for 5b
+	s := CopySlice(slc)
+	s = s[lidx:uidx]
+	return s
 }
 
-// CopySlice ???
+func CopySlice(slc []byte) []byte {
+	s := AllocateMake(len(slc))
+	copy(s, slc)
+	return s
+}

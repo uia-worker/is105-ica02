@@ -8,15 +8,6 @@ const ascii = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f"
 	`@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_` +
 	"`abcdefghijklmnopqrstuvwxyz{|}~\x7f"
 
-// Oppgave 1b
-// Implementer en funksjon som eksportere const ascii
-
-
-// Funksjon tar en "string literal" med kun ASCII tegn og lager en utskrift på
-// følgende format:
-// [ascii-kode heksadesimalt med store bokstaver A-F][mellomrom]
-// [symbol for ascii-kode][mellomrom][ascii-kode binært][linjeskift]
-//
 // Eksempel (utskriften kommer fra en main.go fil):
 //	…
 // 3E > 111110
@@ -25,10 +16,19 @@ const ascii = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f"
 // ...
 func IterateOverASCIIStringLiteral(stringLiteral string) {
 	// Kode for Oppgave 1a
-	
+	for i := 0; i < len(stringLiteral); i++ {
+		fmt.Printf("%X %q %b\n", stringLiteral[i], stringLiteral[i], stringLiteral[i])
+	}
+
 }
 
-// Unix-like operating systems are known to use it as erase control character, i.e. to delete the previous character in the line mode. 
+
+
+func GetASCII() string {
+	return ascii
+}
+
+// Unix-like operating systems are known to use it as erase control character, i.e. to delete the previous character in the line mode.
 
 // Funksjonen skal generere en utskrift fra en sekvens av bytes,
 // dvs. av typen []bytes (det betyr at du må finne den heksadesimale
@@ -39,5 +39,6 @@ func IterateOverASCIIStringLiteral(stringLiteral string) {
 // som inneholder kun ASCII tegn (ikke utvidet ASCII).
 // Gjelder oppgave 1c
 func GreetingASCII() string {
-	return ""
+	return "Hello :-)"
 }
+
