@@ -42,11 +42,16 @@ func EncodeISO8859Pages(path string) {
 	var f *os.File
 	var out *os.File
 	var r io.Reader
+	newPath := path[9:len(path)-3]
 	// Kanskje lage en mappe for resultat med os.Mkdir?
+	err := os.Mkdir(newPath, 0755)
+	if err != nil {
+		panic(err)
+	}
 
 	for _, e := range encodings {
 		f, _ = os.Open(path)
-		out, _ = os.Create(path[9:len(path)-3] + " " + e.String() +".txt")
+		out, _ = os.Create(newPath + "/" + newPath + " " + e.String() +".txt")
 		r = e.NewDecoder().Reader(f)
 		io.Copy(out, r)
 		out.Close()
