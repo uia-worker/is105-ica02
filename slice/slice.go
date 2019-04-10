@@ -25,3 +25,4 @@ func CopySlice(slc []byte) []byte {
 	copy(s, slc)
 	return s
 }
+

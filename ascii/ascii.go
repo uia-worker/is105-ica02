@@ -22,8 +22,6 @@ func IterateOverASCIIStringLiteral(stringLiteral string) {
 
 }
 
-
-
 func GetASCII() string {
 	return ascii
 }
@@ -39,6 +37,6 @@ func GetASCII() string {
 // som inneholder kun ASCII tegn (ikke utvidet ASCII).
 // Gjelder oppgave 1c
 func GreetingASCII() string {
-	return "Hello :-)"
+	return fmt.Sprintf("%q", "Hello :-)")
 }
 
