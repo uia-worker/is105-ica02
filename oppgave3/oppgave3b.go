@@ -1,10 +1,11 @@
 package main
 
 import(
+	"bytes"
 	"os"
 	//"fmt"
 	"io"
-	//"github.com/brisdalen/skole/is105-ica02/fileutils"
+	"github.com/brisdalen/skole/is105-ica02/fileutils"
 	"golang.org/x/text/encoding/charmap"
 )
 
@@ -29,17 +30,20 @@ var(
 func main() {
 
 	pathLang01 := "../files/lang01.wl"
-	EncodeISO8859Pages(pathLang01)
+	b1 := fileutils.FileToByteslice(pathLang01)
+	EncodeISO8859Pages(pathLang01, b1)
 
 	pathLang02 := "../files/lang02.wl"
-	EncodeISO8859Pages(pathLang02)
+	b2 := fileutils.FileToByteslice(pathLang02)
+	EncodeISO8859Pages(pathLang02, b2)
 
 	pathLang03 := "../files/lang03.wl"
-	EncodeISO8859Pages(pathLang03)
+	b3 := fileutils.FileToByteslice(pathLang03)
+	EncodeISO8859Pages(pathLang03, b3)
 }
 
-func EncodeISO8859Pages(path string) {
-	var f *os.File
+func EncodeISO8859Pages(path string, b []byte) {
+	input := b
 	var out *os.File
 	var r io.Reader
 	newPath := path[9:len(path)-3]
@@ -50,15 +54,10 @@ func EncodeISO8859Pages(path string) {
 	}
 
 	for _, e := range encodings {
-		f, _ = os.Open(path)
 		out, _ = os.Create(newPath + "/" + newPath + " " + e.String() +".txt")
-		r = e.NewDecoder().Reader(f)
+		r = e.NewDecoder().Reader(bytes.NewReader(input))
 		io.Copy(out, r)
 		out.Close()
-		f.Close()
 	}
-
-	out.Close()
-	f.Close()
 }
 
