@@ -23,7 +23,9 @@ func TestGreetingtestextendedASCII(t *testing.T) {
 	}
 
 }
-// test that test the string to see if its within the extended ASCII characters.
+/*
+Tester om metoden GreetingExstendedASCII() er innenfor 0x7f og 0xff
+ */
 func TestGreetingExtendedASCIIONLY(t *testing.T) {
 	val := GreetingExtendedASCII()
 	for _, i := range val {

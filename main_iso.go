@@ -11,4 +11,6 @@ func main() {
 	iso.IterateOverASCIIStringLiteral(extendedASCIIStringLiteral)
 	fmt.Println("Under kommer stringen: \"Salut, ça va °-) Κοστίζει €50\"")
 	iso.GreetingExtendedASCII()
+	iso.GreetingExtendedASCIIwithHex()
+	iso.GreetGreet()
 }
