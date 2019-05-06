@@ -51,10 +51,10 @@ func GreetingExtendedASCII() string {
 }
 //formater tegnene i Salut, ça va °-) Ça coute 50"
 //mangler €
-func GreetingExtendedASCIIwithHex() string  {
+func GreetingExtendedASCIIWithHex() string  {
 	s:= []byte("\"\x53\x61\x6C\x75\x74\x2C\x20\xE7\x61\x20\x76\x61\x20\xB0\x2D\x29\x20\xC7\x61\x20\x63\x6F\x75\x74\x65\x20\x80\x35\x30\x22\x0A")
 for i := 0; i < len(s); i++{
-	fmt.Printf("%X %q %b\n", s[i], s[i], s[i])
+	fmt.Printf("%X %q %c %b\n", s[i], s[i], s[i], s[i])
 }
 return string(s[:])
 }
