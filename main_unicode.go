@@ -12,4 +12,6 @@ func main()  {
 	fmt.Println(jp)
 	fmt.Println(is)
 
+	unicode.UnicodeCodePointDemo()
+
 }

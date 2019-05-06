@@ -38,13 +38,35 @@ func GetExtendedASCIIStringLiteral() string {
 // GreetingExtendedASCII returnerer en tekst-streng i
 // utvidet ASCII
 // Kode for Oppgave 2c
+//Skriver ut strengen s.
 func GreetingExtendedASCII() string {
 	s := []byte("\"Salut, ça va °-) Κοστίζει €50\"")
-	//fmt.Printf("%X\n %q %b\n", s,s,s )
 	for i := 0; i < len(s); i++{
 		fmt.Printf("%X %q %b\n", s[i], s[i], s[i])
 	}
 	return string(s[:])
 
 
+
+}
+//formater tegnene i Salut, ça va °-) Ça coute 50"
+//mangler €
+func GreetingExtendedASCIIwithHex() string  {
+	s:= []byte("\"\x53\x61\x6C\x75\x74\x2C\x20\xE7\x61\x20\x76\x61\x20\xB0\x2D\x29\x20\xC7\x61\x20\x63\x6F\x75\x74\x65\x20\x80\x35\x30\x22\x0A")
+for i := 0; i < len(s); i++{
+	fmt.Printf("%X %q %b\n", s[i], s[i], s[i])
+}
+return string(s[:])
+}
+//skriver ut stringen Salut, ça va °-) Ça coute 50"
+func GreetGreet() string {
+	byteArray := []byte{'\x22', '\x53', '\x61', '\x6C', '\x75', '\x74', '\x2C', '\x20', '\xE7', '\x61', '\x20', '\x76',
+		'\x61', '\x20', '\xB0', '\x2D', '\x29', '\x20', '\xC7', '\x61', '\x20', '\x63', '\x6F', '\x75', '\x74', '\x65',
+		'\x20', '\x80', '\x35', '\x30', '\x22', '\x0A'}
+	stringGreet := ""
+	for i := 0; i < len(byteArray); i++{
+		stringGreet += fmt.Sprintf("%c", byteArray[i])
+	}
+	fmt.Println(stringGreet)
+	return stringGreet
 }
