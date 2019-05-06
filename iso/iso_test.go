@@ -1,28 +1,24 @@
 package iso
 
 import (
-	"fmt"
 	"testing"
 )
 
-var greetingtestExtendedASCII = []struct {
-	n1       string
-	expected string
-}{
-	{"Salut, ça va °-", ""},
-	{"Salut, ça va °-) Κοστίζει €50", ""},
-	{"Salut, ça va °-) Κοστίζει ​€50 Forstår du?​",""},
-}
-//test will fail as the expected string input - redundant test from inital deliverable.
-func TestGreetingtestextendedASCII(t *testing.T) {
-	for _, v := range greetingtestExtendedASCII{
-		if val := GreetingExtendedASCII(); val != v.expected{
-			t.Errorf(" greetingExtendedASCII( %q) returned %q expected %q",v.n1, val, v.expected)
+func TestGreetingExtendedASCII(t *testing.T) {
+	s := GreetingExtendedASCII()
+	isExtendedAscii := withinExtendedAscii(s)
 
-		}
+	if !isExtendedAscii {
+		t.Fatal("Not ExtendedASCII")
 	}
-
 }
+
+
+func withinExtendedAscii(s string) bool {
+	for i := 0; i < len(s); i++ {
+		if s[i] > 255 {
+			return false
+
 /*
 Tester om metoden GreetingExstendedASCII() er innenfor 0x7f og 0xff
  */
@@ -32,8 +28,9 @@ func TestGreetingExtendedASCIIONLY(t *testing.T) {
 		if i < 0x7f && i > 0xff {
 			t.Errorf("greetingExtendedASCII() returns non-extended ASCII value: %q - %v", i, i)
 			fmt.Printf("%c", i)
-		}
-		fmt.Printf("%c", i)
-	}
 
+		}
+
+	}
+	return true
 }

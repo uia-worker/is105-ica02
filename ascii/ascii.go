@@ -22,7 +22,7 @@ func IterateOverASCIIStringLiteral(stringLiteral string) {
 
 }
 
-func GetASCII() string {
+func GetASCIIStringLiteral() string {
 	return ascii
 }
 
